@@ -1,5 +1,0 @@
-#git
-ThuyNDsmtp
-git config --global user.name "ThuyNDsmtp"
-git config --global user.email "smtpxmht@gmail.com"
-
