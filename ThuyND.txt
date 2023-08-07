@@ -1,0 +1,53 @@
+#https://www.javatpoint.com/git-commands
+
+#git
+ThuyNDsmtp
+git config --global user.name "ThuyNDsmtp"
+git config --global user.email "smtpxmht@gmail.com"
+
+cd ThuyND
+git clone "https://github.com/ThuyNDsmtp/Net_Core_API.git"
+
+
+#edit code
+#xem thay đổi local
+git status
+#đánh dấu mọi file thay đổi
+git add .
+#lưu local thay đổi
+git commit -m "add code"
+#lưu remote thay đổi
+git push
+
+
+#xem danh sách các nhánh code
+git branch
+#Tạo nhánh mới
+git checkout -b ThuyND
+git branch
+dir
+#edit code
+git status
+git checkout
+
+#chuyển nhánh code, phân biệt hoa thường
+git switch main
+git branch
+git switch ThuyND
+git branch
+
+#đánh dấu
+git add.
+#lưu local
+git commit -m "in ThuyND"
+#lưu remote
+git push --set-upstream origin ThuyND
+
+#Thêm người vào project
+#vào repository
+#Vào settings
+#Vào Collaborators
+#Add people
+https://github.com/ThuyNDsmtp/Net_Core_API/invitations
+#Vào thư xác nhận chấp nhận lời mời
+
