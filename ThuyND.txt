@@ -93,6 +93,8 @@ C# Extensions
 C# Namespace Autocompletion
 C# Snippets
 HTML (C#)
+#Debug, cần xóa thư mục .vscode đi rồi chạy debug lại
+C# Dev Kit
 
 #Visual Studio Code with UTF-8
 File/Refferences/Settings: autoGuessEncoding = Enalbled
@@ -125,6 +127,23 @@ System.Console.WriteLine("Khai báo dữ liệu: int {0}, long {1}, float {2}, d
 System.Console.WriteLine($"Khai báo dữ liệu: int {a}, long {b}, float {c}, double {d}, decimal {e}, bool {f}, character {g}, string {h}",a,b,c,d,e,f,g,h);
 
 
+//Chuyển đổi kiểu dữ liệu
+string str = "123";
+
+int i = int.Parse(str);
+System.Console.WriteLine("1. {0}",i);
+
+int.TryParse(str,out i);
+System.Console.WriteLine("2. {0}",i);
+System.Console.WriteLine("2.1 {0}",int.TryParse(str,out i));
+System.Console.WriteLine("2.2 {0}",int.TryParse("la so 123",out i));
+
+i=Convert.ToInt32(str);
+System.Console.WriteLine("3. {0}",i);
+
+float f = 123;
+
+System.Console.WriteLine("4. {0}",(int)f);
 
 
 
@@ -140,3 +159,36 @@ System.Console.WriteLine($"Khai báo dữ liệu: int {a}, long {b}, float {c}, 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nội dung học:
+Khá chi tiết.
