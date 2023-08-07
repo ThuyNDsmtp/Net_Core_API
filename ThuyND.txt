@@ -98,6 +98,36 @@ HTML (C#)
 File/Refferences/Settings: autoGuessEncoding = Enalbled
 
 
+System.Console.WriteLine("Chào anh Thủy. Mời nhập chuỗi...");
+string str = Console.ReadLine();//Đọc chuỗi ký tự
+//Console.WriteLine($"Dữ liệu vừa nhập vào là: {str}");
+Console.WriteLine("Dữ liệu vừa nhập vào là: {0}",str);
+int a=9;
+int b=3;
+Console.WriteLine($"{0} + {1} = {2}",a,b,a+b);
+
+System.Console.Write("Nhập ký tự: ");
+a = Console.Read();//Đọc ký tự, chuyển về kiểu nguyên
+Console.WriteLine($"Ký tự có mã là: {a}");
+
+#Sử dụng format: {số}, ở đầu không có ký hiệu $; {biến}, ở đầu có ký hiệu $
+int a = 1;
+long b = 2;
+float c = 3;
+double d = 4;
+decimal e = 5;
+bool f = true;
+char g = 'g';
+string h = "Đây là một chuỗi.";
+//Kiểu thứ tự
+System.Console.WriteLine("Khai báo dữ liệu: int {0}, long {1}, float {2}, double {3}, decimal {4}, bool {5}, character {6}, string {7}",a,b,c,d,e,f,g,h);
+//Kiểu biến
+System.Console.WriteLine($"Khai báo dữ liệu: int {a}, long {b}, float {c}, double {d}, decimal {e}, bool {f}, character {g}, string {h}",a,b,c,d,e,f,g,h);
+
+
+
+
+
 
 
 
