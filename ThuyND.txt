@@ -1,8 +1,12 @@
 #-----------------------------------------------------------------
 #https://www.javatpoint.com/git-commands
 
-#git
-ThuyNDsmtp
+#git ThuyNDsmtp
+#List config. Press q to quit, press / and a string to filter string
+git config -l
+git config --get user.name
+
+#Config default
 git config --global user.name "ThuyNDsmtp"
 git config --global user.email "smtpxmht@gmail.com"
 
@@ -68,7 +72,7 @@ chcp 65001
 #Tạo Project Web API FirstWebAPI
 dotnet new webapi --name FirstWebAPI
 
-#Đẩy code lên githup
+#Đẩy code lên github
 git status
 git add .
 git commit -m Create_Project
@@ -89,6 +93,9 @@ C# Extensions
 C# Namespace Autocompletion
 C# Snippets
 HTML (C#)
+
+#Visual Studio Code with UTF-8
+File/Refferences/Settings: autoGuessEncoding = Enalbled
 
 
 
