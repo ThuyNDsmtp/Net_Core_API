@@ -1,3 +1,4 @@
+#-----------------------------------------------------------------
 #https://www.javatpoint.com/git-commands
 
 #git
@@ -50,4 +51,55 @@ git push --set-upstream origin ThuyND
 #Add people
 https://github.com/ThuyNDsmtp/Net_Core_API/invitations
 #Vào thư xác nhận chấp nhận lời mời
+
+#-----------------------------------------------------------------
+#Tạo Project console trong thư mục hiện hành có tên NewApp
+Net_Core_API>dotnet new console --name NewApp
+
+#Chạy ứng dụng console
+#Vào Visual Code/File/Open Folder... : Ctrl+K,Ctrl+O
+#Mở Terminal: Control+`, View > Terminal
+#cd NewApp
+dotnet run
+
+#Hiển thị tiếng Việt trong CMD: Change code page UTF-8
+chcp 65001
+
+#Tạo Project Web API FirstWebAPI
+dotnet new webapi --name FirstWebAPI
+
+#Đẩy code lên githup
+git status
+git add .
+git commit -m Create_Project
+git push
+git status
+
+
+#Thêm extensions
+.NET Install Tool for Extension Authors
+Auto Close Tag
+Auto Complete Tag
+Auto Import
+Auto Rename Tag
+Auto-Using for C#
+C# for Visual Studio Code
+C# Colors
+C# Extensions
+C# Namespace Autocompletion
+C# Snippets
+HTML (C#)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
