@@ -178,7 +178,7 @@ System.Console.WriteLine(@"Lương nhân viên có mã {0} là {1}",MaNV,Luong);
 
 
 //Tính lương
-//using System.Text; Hiển thị tiếng Việt
+//using System.Text; Hiển thị tiếng Việt - Hiển thị Unicode ra console
 System.Console.OutputEncoding = System.Text.Encoding.Unicode;
 
 //Khai báo biến
@@ -217,6 +217,29 @@ Luong = LCB * HeSo + PC;
 //System.Console.WriteLine("Lương nhân viên có mã {0} là {1}",MaNV,Luong);
 System.Console.WriteLine($"Lương nhân viên có mã {MaNV} là {Luong}");
 //System.Console.WriteLine(@"Lương nhân viên có mã {0} là {1}",MaNV,Luong);
+
+
+//Làm việc với lớp class
+
+using NewApp.Models;
+namespace NewApp;
+class Program{
+    public static void Main(){
+        System.Console.OutputEncoding = System.Text.Encoding.Unicode;
+
+        Person p = new();
+        p.Display();
+        
+        p.EnterData();
+        p.Display();
+
+        p.FullName ="Nguyễn Đức Thủy";
+        p.Address = "Hải Dương";
+        p.Age = 54;
+        p.Display();
+
+    }
+}
 
 
 

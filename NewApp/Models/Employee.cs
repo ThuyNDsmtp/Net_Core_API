@@ -1,7 +1,7 @@
 namespace NewApp.Models{
     public class Employee{
-        public string HoTen { get; set; }
-        public string DiaChi { get; set; }
+        public string? HoTen { get; set; }
+        public string? DiaChi { get; set; }
 
         public void NhapThongTin(){
             System.Console.Write("Nhập họ và tên: ");
