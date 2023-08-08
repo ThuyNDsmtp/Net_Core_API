@@ -7,7 +7,7 @@ namespace NewApp.Models
 {
     public class Student:Person
     {
-        public string? StudentCode { get; set; }
+        public string StudentCode { get; set; }
         public void EnterData(){
             System.Console.Write("Nhập mã sinh viên: ");
             StudentCode = Console.ReadLine();
