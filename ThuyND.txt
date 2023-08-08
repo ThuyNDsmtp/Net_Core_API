@@ -59,6 +59,13 @@ git push --set-upstream origin ThuyND
 https://github.com/ThuyNDsmtp/Net_Core_API/invitations
 #Vào thư xác nhận chấp nhận lời mời
 
+#Tự động bỏ qua files khi chạy lện git add . hoặc git add -A
+#.gitignore files
+bin/*
+.vscode/*
+obj/*
+
+
 #-----------------------------------------------------------------
 #Tạo Project console trong thư mục hiện hành có tên NewApp
 Net_Core_API>dotnet new console --name NewApp
