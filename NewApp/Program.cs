@@ -21,4 +21,5 @@ PC = Convert.ToDouble(System.Console.ReadLine());
 
 Luong = LCB * HeSo + PC;
 System.Console.WriteLine("Lương nhân viên có mã {0} là {1}",MaNV,Luong);
-
+System.Console.WriteLine($"Lương nhân viên có mã {MaNV} là {Luong}");
+System.Console.WriteLine(@"Lương nhân viên có mã {0} là {1}",MaNV,Luong);
