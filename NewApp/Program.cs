@@ -1,17 +1,24 @@
-//Chuyển đổi kiểu dữ liệu
-string str = "123";
 
-int i = int.Parse(str);
-System.Console.WriteLine("1. {0}",i);
+//Tính lương
+//using System.Text; Hiển thị tiếng Việt
+System.Console.OutputEncoding = System.Text.Encoding.Unicode;
 
-int.TryParse(str,out i);
-System.Console.WriteLine("2. {0}",i);
-System.Console.WriteLine("2.1 {0}",int.TryParse(str,out i));
-System.Console.WriteLine("2.2 {0}",int.TryParse("la so 123",out i));
+//Khai báo biến
+int MaNV;
+double Luong,LCB,HeSo,PC;
 
-i=Convert.ToInt32(str);
-System.Console.WriteLine("3. {0}",i);
+System.Console.Write("Nhập mã nhân viên: \t");
+MaNV = Convert.ToInt32(System.Console.ReadLine());
 
-float f = 123;
+System.Console.Write("Nhập lương cơ bản: \t");
+LCB = Convert.ToDouble(System.Console.ReadLine());
 
-System.Console.WriteLine("4. {0}",(int)f);
+System.Console.Write("Nhập hệ số: \t\t");
+HeSo = Convert.ToDouble(System.Console.ReadLine());
+
+Console.Write("Nhập phụ cấp: \t\t");
+PC = Convert.ToDouble(System.Console.ReadLine());
+
+Luong = LCB * HeSo + PC;
+System.Console.WriteLine("Lương nhân viên có mã {0} là {1}",MaNV,Luong);
+
