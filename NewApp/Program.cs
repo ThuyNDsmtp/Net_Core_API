@@ -1,6 +1,6 @@
 
 using NewApp.Models;
-namespace NewApp;
+namespace NewApp{
 class Program{
     public static void Main(){
         System.Console.OutputEncoding = System.Text.Encoding.Unicode;
@@ -17,7 +17,7 @@ class Program{
         System.Console.WriteLine("With properties.");
         Student s = new ("Nguyễn Đức Thủy","Hải Dương",1970);
         s.Display();
-
+        
     }
 }
-
+}
