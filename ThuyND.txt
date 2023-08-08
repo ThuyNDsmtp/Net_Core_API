@@ -10,6 +10,9 @@ git config --get user.name
 git config --global user.name "ThuyNDsmtp"
 git config --global user.email "smtpxmht@gmail.com"
 
+#Thay thế giá trị đã có
+git config --replace-all user.name "ThuyNDsmtp"
+
 cd ThuyND
 git clone "https://github.com/ThuyNDsmtp/Net_Core_API.git"
 
