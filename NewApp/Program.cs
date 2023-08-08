@@ -15,7 +15,7 @@ class Program{
         p.Display();
 
         System.Console.WriteLine("With properties.");
-        Student s = new Student("Nguyễn Đức Thủy","Hải Dương",1970);
+        Student s = new ("Nguyễn Đức Thủy","Hải Dương",1970);
         s.Display();
 
     }
