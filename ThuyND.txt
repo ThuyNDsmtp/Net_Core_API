@@ -152,6 +152,8 @@ W3.CSS
 //Tính lương
 //using System.Text; Hiển thị tiếng Việt
 System.Console.OutputEncoding = System.Text.Encoding.Unicode;
+//Nhập liệu tiếng Việt
+System.Console.InputEncoding = System.Text.Encoding.Unicode;
 
 //Khai báo biến
 int MaNV;
@@ -180,6 +182,8 @@ System.Console.WriteLine(@"Lương nhân viên có mã {0} là {1}",MaNV,Luong);
 //Tính lương
 //using System.Text; Hiển thị tiếng Việt - Hiển thị Unicode ra console
 System.Console.OutputEncoding = System.Text.Encoding.Unicode;
+//Nhập liệu tiếng Việt
+System.Console.InputEncoding = System.Text.Encoding.Unicode;
 
 //Khai báo biến
 int MaNV;
@@ -226,6 +230,7 @@ namespace NewApp;
 class Program{
     public static void Main(){
         System.Console.OutputEncoding = System.Text.Encoding.Unicode;
+        System.Console.InputEncoding = System.Text.Encoding.Unicode;
 
         Person p = new();
         p.Display();
@@ -242,7 +247,11 @@ class Program{
 }
 
 
-
+//Để có thể debug trong visual studio code
+//lunch.json
+// "console": "internalConsole",
+            //For debug
+            "console": "integratedTerminal",
 
 
 
