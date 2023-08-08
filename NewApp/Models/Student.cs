@@ -1,20 +1,20 @@
-public class Student
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace NewApp.Models
 {
-    public string FullName;
-    public string Address;
-    public int Birthday;
-    public Student(string fullName,string address,int birthday){
-        FullName = fullName;
-        Address = address;
-        Birthday = birthday;
-    }
-    public void Rename(string newName){
-        FullName = newName;
-    }
-    public int BirthYear(){
-        return (DateTime.Now.Year - Birthday);
-    }
-    public void Display(){
-        System.Console.WriteLine("Full name is {0}, Address is {1}, Age is {2}",FullName,Address,BirthYear());
+    public class Student:Person
+    {
+        public string? StudentCode { get; set; }
+        public void EnterData(){
+            System.Console.Write("Nhập mã sinh viên: ");
+            StudentCode = Console.ReadLine();
+            base.EnterData();
+        }
+        public void Display(){
+            System.Console.WriteLine("Mã SV {0}, họ và tên SV {1}, địa chỉ SV {2}, tuổi SV {3}.",StudentCode,base.FullName,base.Address,base.Age);
+        }
     }
 }

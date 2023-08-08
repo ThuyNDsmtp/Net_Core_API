@@ -62,7 +62,6 @@ https://github.com/ThuyNDsmtp/Net_Core_API/invitations
 #Tự động bỏ qua files khi chạy lện git add . hoặc git add -A
 #.gitignore files
 bin/*
-.vscode/*
 obj/*
 
 
