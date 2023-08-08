@@ -1,11 +1,11 @@
 public class Person
 {
-public Person(string fullName,string address, sbyte age) 
-{
-    this.FullName = fullName;
-    this.Address = address;
-    this.Age = age;
-}
+    public Person(string fullName,string address, sbyte age) 
+    {
+        FullName = fullName;
+        Address = address;
+        Age = age;
+    }
     public string FullName { get; set; }
     public string Address { get; set; }
     public sbyte Age { get; set; }
@@ -30,6 +30,6 @@ public Person(string fullName,string address, sbyte age)
         if (sbyte.TryParse(age, out sbyte i)) Age = i;
     }
     public void Display(){
-        System.Console.WriteLine("{0} - {1}",FullName,Address);
+        System.Console.WriteLine("Default display {0} - {1} - {2}",FullName,Address,Age);
     }
 }
