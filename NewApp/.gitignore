@@ -1,4 +1,4 @@
 #.gitignore files
-bin/*
+bin/
 #./.vscode/*
-obj/*
+obj/
