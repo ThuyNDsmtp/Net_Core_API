@@ -1,20 +1,20 @@
 namespace NewApp.Models;
 public class Person
 {
-    // public Person(string fullName,string address, sbyte age) 
-    // {
-    //     FullName = fullName;
-    //     Address = address;
-    //     Age = age;
-    // }
+    public Person(string fullName,string address, sbyte age) 
+    {
+        FullName = fullName;
+        Address = address;
+        Age = age;
+    }
     public string FullName { get; set; }
     public string Address { get; set; }
     public sbyte Age { get; set; }
-    // public Person(){
-    //     FullName = "Họ và tên";
-    //     Address = "Địa chỉ";
-    //     Age = 0;
-    // }
+    public Person(){
+        FullName = "Họ và tên";
+        Address = "Địa chỉ";
+        Age = 0;
+    }
     public void EnterData(){
         string? str;
         System.Console.Write("Full name = ");

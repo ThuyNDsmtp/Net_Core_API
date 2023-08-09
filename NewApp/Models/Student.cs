@@ -8,9 +8,14 @@ namespace NewApp.Models
     public class Student:Person
     {
         public string StudentCode { get; set; }
+        public Student(){
+            base.MemberwiseClone();
+            StudentCode="";
+        }
         public new void EnterData(){
             System.Console.Write("Nhập mã sinh viên: ");
-            StudentCode = Console.ReadLine();
+            string? str = Console.ReadLine();
+            if (str==null) StudentCode="";else StudentCode=str;
             base.EnterData();
         }
         public new void Display(){
