@@ -5,7 +5,7 @@ public class Program{
                 System.Console.OutputEncoding = System.Text.Encoding.Unicode;
                 System.Console.InputEncoding = System.Text.Encoding.Unicode;
 
-                System.Console.Write("Nhập số lượng student = ");
+                System.Console.Write("Nhập số lượng person = ");
                 string? str=Console.ReadLine();
                 int.TryParse(str,out int n);
                 if (n <= 0) {
@@ -13,22 +13,39 @@ public class Program{
                         System.Environment.Exit(1);
                 }
 
-                ArrayList arrList = new(n);
+                ArrayList pList = new ArrayList(n);
                 for (int i = 0; i < n; i++){
-                        Student std = new();
-                        std.EnterData();
-                        arrList.Add(std);
+                        Person p = new();
+                        p.AddNewPerson(pList);
                 }
-                (arrList[0] as Student).Address += " (đã sửa)";
-                (arrList[n - 1] as Student).Address = " (Đã xóa)";
-                System.Console.WriteLine("Thông tin sinh viên đã nhập vào như sau:");
+            System.Console.WriteLine("-------------------------------------------------------------");
+                System.Console.WriteLine("List of persons entered:");
+                for(int i=0; i<n;i++){
+                        (pList[i] as Person).Display();
+                }
+        System.Console.WriteLine("-------------------------------------------------------------");
+                //Thêm
+                System.Console.WriteLine("Enter new person:");
+                    (pList[0] as Person).AddNewPerson(pList);
+System.Console.WriteLine("List of persons:");
+                for(int i=0; i<n;i++){
+                        (pList[i] as Person).Display();
+                }
 
-                foreach(Student std in arrList){
-                        std.Display();
+                //Sửa
+                System.Console.Write("Enter person name for edit: ");
+                string pName=Console.ReadLine();
+                foreach(Person pe in pList){
+                        if(pe.FullName==pName){
+                                pe.EditPerson(pList,pName);
+                        }
                 }
-                // for(int i = 0; i < arrList.Count; i++){
-                //         (arrList[i] as Student)?.Display();
-                // }
+                System.Console.WriteLine("List of persons:");
+                for(int i=0; i<n;i++){
+                        (pList[i] as Person).Display();
+                }
+
+
                 
         }
 }
