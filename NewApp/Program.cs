@@ -1,35 +1,31 @@
+using System.Collections;
 using NewApp.Models;
 public class Program{
         public static void Main(){
-        System.Console.OutputEncoding = System.Text.Encoding.Unicode;
-        System.Console.InputEncoding = System.Text.Encoding.Unicode;
+                System.Console.OutputEncoding = System.Text.Encoding.Unicode;
+                System.Console.InputEncoding = System.Text.Encoding.Unicode;
 
-      
-        //Khai báo số lượng person
-        int n=0;
-        while(n <= 0){
-                try{
-                        System.Console.Write("Nhập số lượng person = ");
-                        string? str = Console.ReadLine();
-                        n=int.Parse(str);
-                }catch{
-                        System.Console.WriteLine("Cần nhập vào số hợp lệ là số nguyên dương.");
+                System.Console.Write("Nhập số lượng student = ");
+                string? str=Console.ReadLine();
+                int.TryParse(str,out int n);
+                if (n <= 0) {
+                        System.Console.WriteLine("Cần nhập một số nguyên dương.");
+                        System.Environment.Exit(1);
                 }
-        }
-       
-        //Nhập dữ liệu từng person
-        Person[] p = new Person[n];
-        for(int i=0;i<n;i++){
-                System.Console.WriteLine($"Nhập vào người thứ {i+1}:");
-                p[i]=new();
-                p[i].EnterData();
-        }
-        //In kết quả
-        System.Console.WriteLine("---------------------------------------------------------------------");
-        System.Console.WriteLine($"Kết quả đã nhập vào {n} Person (Person <n>: <FullName> - <Address> - <Age>):");
-        for(int i=0;i<n;i++){
-                System.Console.Write($"Person {i+1}: ");
-                p[i].Display();
-        }
+
+                ArrayList arrList = new(n);
+                for (int i = 0; i < n; i++){
+                        Student std = new();
+                        std.EnterData();
+                        arrList.Add(std);
+                }
+                System.Console.WriteLine("Thông tin sinh viên đã nhập vào như sau:");
+                foreach(Student std in arrList){
+                        std.Display();
+                }
+                for(int i = 0; i < arrList.Count; i++){
+                        (arrList[i] as Student).Display();
+                }
+                
         }
 }
