@@ -69,6 +69,8 @@ https://github.com/ThuyNDsmtp/Net_Core_API/invitations
 bin/*
 obj/*
 
+#Loại bỏ filename trong git, không xóa file
+git rm --cached filename
 
 #-----------------------------------------------------------------
 #Tạo Project console trong thư mục hiện hành có tên NewApp
@@ -344,6 +346,19 @@ public class Program{
         }
 }
 
+
+
+//Thoát chương trình, về OS
+if (System.Windows.Forms.Application.MessageLoop) 
+{
+    // WinForms app
+    System.Windows.Forms.Application.Exit();
+}
+else
+{
+    // Console app
+    System.Environment.Exit(1);
+}
 
 
 

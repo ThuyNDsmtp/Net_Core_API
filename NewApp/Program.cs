@@ -17,8 +17,6 @@ public class Program{
                 }
         }
        
-    
-
         //Nhập dữ liệu từng person
         Person[] p = new Person[n];
         for(int i=0;i<n;i++){
