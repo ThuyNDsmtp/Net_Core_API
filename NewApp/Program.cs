@@ -26,8 +26,7 @@ public class Program{
         }
         //In kết quả
         System.Console.WriteLine("---------------------------------------------------------------------");
-        System.Console.WriteLine($"Kết quả đã nhập vào {n} Person:");
-
+        System.Console.WriteLine($"Kết quả đã nhập vào {n} Person (Person <n>: <FullName> - <Address> - <Age>):");
         for(int i=0;i<n;i++){
                 System.Console.Write($"Person {i+1}: ");
                 p[i].Display();
