@@ -29,8 +29,9 @@ public class Person
         System.Console.Write("Age = ");
         string? age = Console.ReadLine();
         if (sbyte.TryParse(age, out sbyte i)) Age = i;
+        else Age=0;
     }
     public void Display(){
-        System.Console.WriteLine("Default display {0} - {1} - {2}",FullName,Address,Age);
+        System.Console.WriteLine("{0} - {1} - {2}",FullName,Address,Age);
     }
 }
