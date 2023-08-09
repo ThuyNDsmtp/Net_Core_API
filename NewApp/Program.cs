@@ -22,12 +22,13 @@ public class Program{
                 (arrList[0] as Student).Address += " (đã sửa)";
                 (arrList[n - 1] as Student).Address = " (Đã xóa)";
                 System.Console.WriteLine("Thông tin sinh viên đã nhập vào như sau:");
+
                 foreach(Student std in arrList){
                         std.Display();
                 }
-                for(int i = 0; i < arrList.Count; i++){
-                        (arrList[i] as Student)?.Display();
-                }
+                // for(int i = 0; i < arrList.Count; i++){
+                //         (arrList[i] as Student)?.Display();
+                // }
                 
         }
 }
