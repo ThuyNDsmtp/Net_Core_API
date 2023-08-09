@@ -26,6 +26,7 @@ public class Person
         str = Console.ReadLine();
         if (str is null) Address = "";
         else Address = str;
+        
         System.Console.Write("Age = ");
         string? age = Console.ReadLine();
         if (sbyte.TryParse(age, out sbyte i)) Age = i;

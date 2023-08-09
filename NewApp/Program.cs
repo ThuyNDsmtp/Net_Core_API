@@ -6,12 +6,19 @@ public class Program{
 
       
         //Khai báo số lượng person
-        System.Console.Write("Nhập số lượng person = ");
-        string? str = Console.ReadLine();
-        if (!int.TryParse(str,out int n)){
-                System.Console.WriteLine("Số lượng [{0}] không hợp lệ.",str);
-                System.Environment.Exit(1);
+        int n=0;
+        while(n <= 0){
+                try{
+                        System.Console.Write("Nhập số lượng person = ");
+                        string? str = Console.ReadLine();
+                        n=int.Parse(str);
+                }catch{
+                        System.Console.WriteLine("Cần nhập vào số hợp lệ là số nguyên dương.");
+                }
         }
+       
+    
+
         //Nhập dữ liệu từng person
         Person[] p = new Person[n];
         for(int i=0;i<n;i++){
@@ -21,7 +28,7 @@ public class Program{
         }
         //In kết quả
         System.Console.WriteLine("---------------------------------------------------------------------");
-        System.Console.WriteLine("Kết quả đã nhập vào:");
+        System.Console.WriteLine($"Kết quả đã nhập vào {n} Person:");
 
         for(int i=0;i<n;i++){
                 System.Console.Write($"Person {i+1}: ");
