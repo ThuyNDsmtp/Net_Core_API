@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><FORM></FORM></title>
+    <style>
+        input {
+          border-radius: 4px;
+        }
+        </style>
+</head>
+<body>
+    
+    <div style="margin: auto;width: 220pt;padding: 5pt;background-color: rgb(197, 192, 186);">
+            <form action="./Demo.html" method="post">
+                <h1>Sign Up</h1>
+             <label for="Sign">It's free and always will be.</label><br/><br/>
+            <input type="text" name="FirstName" id="FirstName" placeholder="First name" style="width: 100pt;">
+            <input type="text" name="LastName" id="LastName" placeholder="Last name" style="width: 100pt;">
+            <input type="email" name="email" id="email" placeholder="Email or mobile number" style="width: 210pt;">
+            <input type="email" name="email" id="email" placeholder="Re-enter email or mobile number" style="width: 210pt;">
+            <input type="password" name="password" id="password" style="width: 210pt;" placeholder="New password">
+            <p><b>Birthday</b></p>
+            <input type="datetime-local" name="months" id="month">
+            <select name="months" id="month">
+                <option value="0">Month</option>
+                <option value="1">Tháng 1</option>
+                <option value="2">Tháng 2</option>
+                <option value="3">Tháng 3</option>
+                <option value="4">Tháng 4</option>
+                <option value="5">Tháng 5</option>
+                <option value="6">Tháng 6</option>
+                <option value="7">Tháng 7</option>
+                <option value="8">Tháng 8</option>
+                <option value="9">Tháng 9</option>
+                <option value="10">Tháng 10</option>
+                <option value="11">Tháng 11</option>
+                <option value="12">Tháng 12</option>
+            </select>
+            <select name="days" id="day">
+                <option value="day">day</option>
+            </select>
+            <select name="years" id="year">
+                <option value="year">year</option>
+            </select>
+
+            <br>
+            <label for="Female"><input type="radio" name="Gen" id="Female"><b>Female</b></label>
+            <label for="Male"><input type="radio" name="Gen" id="Male"><b>Male</b></label><br>
+            <p style="font-size: 8pt;">By clicking Sign Up, you agree to our Terms and that you have read our Data Policy, including our Cookie Use.</p>
+            <input type="submit" value="Sign Up" style="background-color: rgb(118, 216, 52);">
+        </form>   
+    </div>
+</body>
+</html>
