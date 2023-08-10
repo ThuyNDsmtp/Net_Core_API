@@ -6,12 +6,11 @@ https://hub.docker.com/
 #-----------------------------------------------------------------
 #https://www.javatpoint.com/git-commands
 
-#git ThuyNDsmtp
 #List config. Press q to quit, press / and a string to filter string
 git config -l
 git config --get user.name
 
-#Config default
+#Git: Config default
 git config --global user.name "ThuyNDsmtp"
 git config --global user.email "smtpxmht@gmail.com"
 
@@ -401,6 +400,10 @@ public class Program{
 
 #-----------------------------------------------------------------
 #Buổi 7
+#Client: HTML, CSS, JS (Javascript)
+#Framwork: React, Angular, Vue
+#HTML: https://www.w3schools.com/
+#CSS: https://www.w3schools.com/w3css/
 
 
 #-----------------------------------------------------------------
