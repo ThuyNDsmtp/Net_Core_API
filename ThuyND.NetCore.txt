@@ -404,7 +404,7 @@ public class Program{
 #Framwork: React, Angular, Vue
 #HTML: https://www.w3schools.com/
 #CSS: https://www.w3schools.com/w3css/
-
+#JS: https://www.w3schools.com/w3js
 
 #-----------------------------------------------------------------
 #Buổi 8
