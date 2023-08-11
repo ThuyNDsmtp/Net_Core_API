@@ -3,6 +3,7 @@ Thầy Phạm Quang Hiển
 GitHub PhamQuangHien
 #-----------------------------------------------------------------
 https://hub.docker.com/
+https://learn.microsoft.com/en-us/dotnet/core/tutorials/
 #-----------------------------------------------------------------
 #https://www.javatpoint.com/git-commands
 
@@ -465,7 +466,34 @@ mkdir MrThuy
 4. Lưu ý:
 + Các tiền tố giống nhau
 + View Index là mặc định
-+ các biến trong Controller và trong View phải trùng tên
++ các biến trong Controller và trong View và trong Models phải trùng tên
+
+5. Chạy app
+dotnet watch run
+
+
+#Entity Framwork: https://dotnettutorials.net/
+#https://learn.microsoft.com/en-us/dotnet/core/tutorials/
+
+dotnet tool uninstall --global
+dotnet aspnet-codegenerator controller -name <c>Controller -m <m> 
+dotnet add package Microsoft.EntityFramworkCore.SQLite
+dotnet add package Microsoft.EntityFramworkCore.SQLServer
+dotnet add package Microsoft.EntityFramworkCore.Design
+
+#Student
+Tạo class Models/Student
+#ApplicationContext
+public DbSet Student
+
+
+dotnet ef migrations add <note>
+dotnet ef database update
+
+dotnet watch run
+
+#Tạo code
+dotnet aspnet-codegenerator controller -name StudentController -m Student -dc ApplicationDbContext -relativeFolderPaht Controllers --useDefaultLayout --referenceScriptLibraries -sqlite
 
 #-----------------------------------------------------------------
 #Buổi 10
@@ -558,4 +586,5 @@ mkdir MrThuy
 Nội dung học:
 Buổi 1-2: Khá chi tiết.
 Buổi 3: Nhanh so với người mới, chậm so với người cũ.
+Buổi 9: Rất nhanh sơ với người mới
 
