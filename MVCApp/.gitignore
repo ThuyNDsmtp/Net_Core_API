@@ -3,3 +3,5 @@
 bin/
 obj/
 wwwroot/
+!wwwroot\css\w3.css
+!wwwroot\lib\w3.js

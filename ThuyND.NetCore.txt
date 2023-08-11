@@ -4,6 +4,8 @@ GitHub PhamQuangHien
 #-----------------------------------------------------------------
 https://hub.docker.com/
 https://learn.microsoft.com/en-us/dotnet/core/tutorials/
+https://learn.microsoft.com/en-us/aspnet/core/getting-started/?view=aspnetcore-7.0&tabs=windows
+https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-7.0&tabs=visual-studio-code
 #-----------------------------------------------------------------
 #https://www.javatpoint.com/git-commands
 
@@ -413,8 +415,12 @@ public class Program{
 #Buổi 9 MVC:
 1. Tạo project MVCApp
 dotnet new mvc -o MVCApp
+code -r MVCApp
 cd .\MVCApp\
 dotnet watch run
+
+#Trust the development certificate
+dotnet dev-certs https --trust
 
 2. Tạo Controller
 Tạo <Name>Controller.cs
@@ -488,6 +494,7 @@ public DbSet Student
 
 
 dotnet ef migrations add <note>
+dotnet ef migrations remove
 dotnet ef database update
 
 dotnet watch run
@@ -497,6 +504,9 @@ dotnet aspnet-codegenerator controller -name StudentController -m Student -dc Ap
 
 #-----------------------------------------------------------------
 #Buổi 10
+#Thêm cột vào bảng (class trong Models)
+dotnet migrations add Add_Columns
+
 #-----------------------------------------------------------------
 #Buổi 11
 #-----------------------------------------------------------------

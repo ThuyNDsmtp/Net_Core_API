@@ -1,9 +1,9 @@
 namespace MVCApp.Models
 {   
-    [Table("Person")]
+   // [Table("Person")]
     public class Person
     {
-        [Key]
+        //[Key]
         public string PersonID { get; set; }
         public string FullName { get; set; }
         public string Address { get; set; }
