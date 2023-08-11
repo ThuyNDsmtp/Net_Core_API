@@ -409,7 +409,64 @@ public class Program{
 #-----------------------------------------------------------------
 #Buổi 8
 #-----------------------------------------------------------------
-#Buổi 9
+#Buổi 9 MVC:
+1. Tạo project MVCApp
+dotnet new mvc -o MVCApp
+cd .\MVCApp\
+dotnet watch run
+
+2. Tạo Controller
+Tạo <Name>Controller.cs
+Tạo Action trong Controller
+
+3. Tạo View tương ứng controller
+
+
+1. Tạo một project trong thực mục hiện tại với tên là MVCApp
+dotnet new mvc -o MVCApp
+#Thư mục MVCApp được tạo ra, chứa nội dung mặc định cho app kiểu mvc
+
+2.Tạo Controller hậu tố Controller.cs, ví dụ MrThuyController.cs
+#Copy nội dung từ HomeController.cs sang MrThuyController.cs
+#Sửa Home thành MrThuy
+#Sửa action Index
+ public IActionResult Index(string fName, string address)
+    {
+        if(fName is null)
+            ViewBag.ThongBao = "Nothing";
+        else
+            ViewBag.ThongBao = fName + " - " + address;
+       
+	return View();
+    }
+
+3. Tạo view MrThuy
+#Tạo thư mục MrThuy
+cd MVCApp
+mkdir MrThuy
+#Tạo file rỗng Index.cshtml
+#Nhập nội dung
+@{
+    ViewData["Title"] = "Enter data";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Enter demo</h1>
+
+    <form asp-action="Index" method="post">
+        <input type="text" name="fName" id="fName" placeholder="Enter full name"><br>
+        <input type="text" name="address" id="address" placeholder="Enter address"><br>
+        <input type="submit" value="Send">
+    </form>
+    <br>
+    You are sended: @ViewBag.ThongBao
+
+</div>
+4. Lưu ý:
++ Các tiền tố giống nhau
++ View Index là mặc định
++ các biến trong Controller và trong View phải trùng tên
+
 #-----------------------------------------------------------------
 #Buổi 10
 #-----------------------------------------------------------------

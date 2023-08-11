@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Enter data";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Enter demo</h1>
+
+    <form asp-action="Index" method="post">
+        <input type="text" name="fName" id="fName" placeholder="Enter full name"><br>
+        <input type="text" name="address" id="address" placeholder="Enter address"><br>
+        <input type="submit" value="Send">
+    </form>
+    <br>
+    You are sended: @ViewBag.ThongBao
+
+</div>

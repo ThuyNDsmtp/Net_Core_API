@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        .center{
+            margin: auto;
+            
+        }
+    </style>
 </head>
 <body>
     <div style="width: 33.33%;margin: auto;border-style:outset;border-color: cyan;">
@@ -16,9 +22,11 @@
             <img src="../Img/Untitled.png" alt="Ảnh login">
         </div>
             <label for="Username"><b>User name:</b></label><br>
-            <input type="text" name="Username" id="usename" style="width: 96%;" placeholder="Enter user name"><br>
+            <div class="center">
+                <input type="text" name="Username" id="usename" style="width: 90%;" placeholder="Enter user name">
+            </div>
             <label for="password"><b>Password:</b></label><br>
-            <input type="password" name="password" id="password" style="width: 96%;" placeholder="Enter password"><br>
+            <input class="center" type="password" name="password" id="password" style="width: 140pt;" placeholder="Enter password"><br>
             <p><input type="submit" value="Login" style="width: 99%;background-color: rgb(159, 221, 159);"></p>
             <p>
                 <input type="checkbox" name="RememberMe" id="RememberMe" style="background-color: blue;">
