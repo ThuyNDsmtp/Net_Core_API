@@ -8,10 +8,12 @@ namespace MvcMovie.Models
 {
     public class Person
     {
+        [Key]
         public required string PersonId {get;set;}
+        [Required]
         [MaxLength(60)]
-        
         public string? FullName {get;set;}
+        [MaxLength(100)]
         public string? Address {get;set;}
     }
 }

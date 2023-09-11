@@ -14,6 +14,6 @@ namespace MvcMovie.Models
         }
 
         public DbSet<HeThongPhanPhoi> HeThongPhanPhoi { get; set; } = default!;
-        // public DbSet<Person> Person { get; set; } = default!;
+        //public DbSet<Person> Person { get; set; } = default!;
     }
 }

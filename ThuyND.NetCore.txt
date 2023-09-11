@@ -71,6 +71,7 @@ https://github.com/ThuyNDsmtp/Net_Core_API/invitations
 .gitignore
 bin/
 obj/
+wwwroot/
 
 #Loại bỏ filename trong git, không xóa file
 git rm --cached filename
@@ -478,6 +479,7 @@ mkdir MrThuy
 dotnet watch run
 
 
+#Cài đặt môi trường làm việc
 #Entity Framwork: https://dotnettutorials.net/
 #https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-model?view=aspnetcore-7.0&tabs=visual-studio-code
 dotnet tool uninstall --global dotnet-aspnet-codegenerator
@@ -489,6 +491,8 @@ dotnet add package Microsoft.EntityFrameworkCore.SQLite
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.EntityFrameworkCore.Tools
+#Cài đặt môi trường làm việc
+
 
 #Tạo code cho Movies
 #dotnet aspnet-codegenerator controller -name MoviesController -m Movie -dc MvcMovie.Data.MvcMovieContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
@@ -507,7 +511,7 @@ dotnet ef database update
 
 dotnet watch run
 
-#Tạo code
+#Tạo code tự động
 dotnet aspnet-codegenerator controller -name StudentController -m Student -dc ApplicationDbContext -relativeFolderPaht Controllers --useDefaultLayout --referenceScriptLibraries -sqlite
 
 #-----------------------------------------------------------------
@@ -517,6 +521,11 @@ dotnet migrations add Add_Columns
 
 #-----------------------------------------------------------------
 #Buổi 11
+MVC:
+M tương ứng CSDL
+V hiển thị giao diện
+C chứa logic, xử lý tại server
+
 #-----------------------------------------------------------------
 #Buổi 12
 #-----------------------------------------------------------------
