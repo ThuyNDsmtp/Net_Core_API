@@ -1,3 +1,6 @@
+Minh: Mạng CT23, Erp khử Huy
+#-----------------------------------------------------------------
+#Error: Nhiều lần phải cài lại .Net Core và khởi động lại máy mới hết lỗi
 #-----------------------------------------------------------------
 Thầy Phạm Quang Hiển
 GitHub PhamQuangHien
@@ -513,7 +516,7 @@ mkdir MrThuy
 dotnet watch run
 
 
-#Cài đặt môi trường làm việc
+#Cài đặt môi trường làm việc cho từng dự án
 #Entity Framwork: https://dotnettutorials.net/
 #https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-model?view=aspnetcore-7.0&tabs=visual-studio-code
 dotnet tool uninstall --global dotnet-aspnet-codegenerator
@@ -523,9 +526,9 @@ dotnet tool install --global dotnet-ef
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet add package Microsoft.EntityFrameworkCore.SQLite
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+#dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet add package Microsoft.EntityFrameworkCore.Tools
-#Cài đặt môi trường làm việc
+#Cài đặt môi trường làm việc cho từng dự án
 
 
 #Tạo code cho Movies
@@ -560,8 +563,42 @@ M tương ứng CSDL
 V hiển thị giao diện
 C chứa logic, xử lý tại server
 
+#Javascript
+JQuyery
+W3js
 #-----------------------------------------------------------------
-#Buổi 12
+#Buổi 12 WebAPI
+#https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-7.0&tabs=visual-studio-code
+#Phân biệt hoa thường
+dotnet new webapi -o WebAPIApp
+cd WebAPIApp
+code -r ../WebAPIApp
+#Cài đặt môi trường làm việc chỉ một lần
+dotnet tool uninstall --global dotnet-aspnet-codegenerator
+dotnet tool install --global dotnet-aspnet-codegenerator
+dotnet tool uninstall --global dotnet-ef
+dotnet tool install --global dotnet-ef
+#Cài đặt môi trường làm việc cho từng dự án
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.SQLite
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+#dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+
+#ApplicationDbContext
+#Tạo ApplicationDbContext.cs trong Data
+dotnet-aspnet-codegenerator controller -name PersonController -async -api -m Person -dc NetBackend.Data.ApplicationDbContext -outDir Controllers
+
+
+#Kết nối CSDL
+#Thêm vào cuối file appsettings.json
+,"ConnectionStrings": {
+    "ApplicationDbContext": "Data Source = App.db"}
+
+dotnet ef migrations add a_note
+#dotnet ef migrations remove
+dotnet ef database update
+
 #-----------------------------------------------------------------
 #Buổi 13
 #-----------------------------------------------------------------
