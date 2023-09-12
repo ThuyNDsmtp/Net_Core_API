@@ -52,7 +52,7 @@ git switch ThuyND
 git branch
 
 #đánh dấu
-git add.
+git add .
 #lưu local
 git commit -m "in ThuyND"
 #lưu remote
@@ -76,6 +76,35 @@ wwwroot/
 #Loại bỏ filename trong git, không xóa file
 git rm --cached filename
 
+
+
+
+git config remote.origin.url "https://github.com/ThuyNDsmtp/ExamRegistration.git"
+
+
+
+#Sau khi tạo respository và chuyển đến thư mục có sẵn chạy các lệnh sau để up code lên server
+#create a new repository on the command line
+#create repository NetAPIApp.git
+#cd the folder and then
+echo "# RegisterExam" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git config remote.origin.url "https://github.com/ThuyNDsmtp/RegisterExam.git"
+#git remote add origin https://github.com/ThuyNDsmtp/RegisterExam.git
+git push -u origin master
+
+
+
+#push an existing repository from the command line
+git remote add origin https://github.com/ThuyNDsmtp/ExamRegistration.git
+git branch -M master
+git push -u origin master
+
+#-----------------------------------------------------------------
+Nếu dotnet sdk cũ thì có thể gây lỗi không rõ ràng
 #-----------------------------------------------------------------
 #Tạo Project console trong thư mục hiện hành có tên NewApp
 Net_Core_API>dotnet new console --name NewApp
@@ -99,6 +128,11 @@ git commit -m Create_Project
 git push
 git status
 
+git config --unset push.autosetupremote
+git config -l
+
+#git remote add MvcMovie https://github.com/ThuyNDsmtp/MvcMove.git
+#git push --set-upstream MvcMovie master
 
 #Thêm extensions
 .NET Install Tool for Extension Authors
