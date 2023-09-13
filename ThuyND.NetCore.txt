@@ -20,6 +20,9 @@ git config --get user.name
 git config --global user.name "ThuyNDsmtp"
 git config --global user.email "smtpxmht@gmail.com"
 
+#for push to DemoWebApi in server
+git config remote.origin.url "https://github.com/ThuyNDsmtp/DemoWebApi.git"
+
 #Thay thế giá trị đã có
 git config --replace-all user.name "ThuyNDsmtp"
 
@@ -595,7 +598,7 @@ dotnet-aspnet-codegenerator controller -name PersonController -async -api -m Per
 ,"ConnectionStrings": {
     "ApplicationDbContext": "Data Source = App.db"}
 
-dotnet ef migrations add a_note
+dotnet ef migrations add buoi12
 #dotnet ef migrations remove
 dotnet ef database update
 
