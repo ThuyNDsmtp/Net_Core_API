@@ -1,6 +1,7 @@
 Minh: Mạng CT23, Erp khử Huy
 #-----------------------------------------------------------------
 #Error: Nhiều lần phải cài lại .Net Core và khởi động lại máy mới hết lỗi
+#Có lúc phải xóa migration lỗi
 #-----------------------------------------------------------------
 Thầy Phạm Quang Hiển
 GitHub PhamQuangHien
@@ -544,9 +545,9 @@ Tạo class Models/Student
 #ApplicationContext
 public DbSet Student
 
-
+dotnet build
 dotnet ef migrations add <note>
-dotnet ef migrations remove
+#dotnet ef migrations remove
 dotnet ef database update
 
 dotnet watch run
@@ -598,12 +599,14 @@ dotnet-aspnet-codegenerator controller -name PersonController -async -api -m Per
 ,"ConnectionStrings": {
     "ApplicationDbContext": "Data Source = App.db"}
 
+dotnet build
 dotnet ef migrations add buoi12
 #dotnet ef migrations remove
 dotnet ef database update
 
 #-----------------------------------------------------------------
 #Buổi 13
+#https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-7.0&tabs=visual-studio-code#over-post
 #-----------------------------------------------------------------
 #Buổi 14
 #-----------------------------------------------------------------
