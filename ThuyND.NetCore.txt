@@ -2,6 +2,7 @@ Minh: Mạng CT23, Erp khử Huy
 #-----------------------------------------------------------------
 #Error: Nhiều lần phải cài lại .Net Core và khởi động lại máy mới hết lỗi
 #Có lúc phải xóa migration lỗi
+#Lỗi nhiều dbcontext: dotnet ef migrations add Buoi14 --context ApplicationDbContext
 #-----------------------------------------------------------------
 Thầy Phạm Quang Hiển
 GitHub PhamQuangHien
@@ -535,10 +536,9 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools
 #Cài đặt môi trường làm việc cho từng dự án
 
 
-#Tạo code cho Movies
-#dotnet aspnet-codegenerator controller -name MoviesController -m Movie -dc MvcMovie.Data.MvcMovieContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
-#For Person
-dotnet aspnet-codegenerator controller -name PersonController -m Person -dc MvcPerson.Data.MvcPersonContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
+#Auto create EmployeeController, yêu cầu phải có trường là Key
+dotnet aspnet-codegenerator controller -name EmployeeController -m Employee -dc NetBackend.Data.EmployeeContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries --databaseProvider sqlite
+
 
 #Student
 Tạo class Models/Student
@@ -549,7 +549,8 @@ dotnet build
 dotnet ef migrations add <note>
 #dotnet ef migrations remove
 dotnet ef database update
-
+#Lỗi có thể phát sinh do dữ liệu null, thiếu bảng
+#dotnet ef database drop > xóa tất cả các file trong foler Migrations > dotnet ef migrations add InitCreate > dotnet ef database update
 dotnet watch run
 
 #Tạo code tự động
@@ -592,7 +593,8 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools
 #ApplicationDbContext
 #Tạo ApplicationDbContext.cs trong Data
 dotnet-aspnet-codegenerator controller -name PersonController -async -api -m Person -dc NetBackend.Data.ApplicationDbContext -outDir Controllers
-
+dotnet-aspnet-codegenerator controller -name YourController -async -api -m YourModel -dc YourNamespace.ApplicationDbContext -outDir Controllers
+dotnet-aspnet-codegenerator controller -name DaiLyController -async -api -m DaiLy -dc NetBackend.Data.ApplicationDbContext -outDir Controllers
 
 #Kết nối CSDL
 #Thêm vào cuối file appsettings.json
